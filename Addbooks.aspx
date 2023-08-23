@@ -34,9 +34,20 @@
         {
             height: 33px;
         }
+        .style11
+        {
+            text-align: right;
+            color: black;
+            height: 48px;
+        }
+        .style12
+        {
+            height: 48px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
     <table class="tbl">
     <tr>
         <td class="style4">
@@ -126,10 +137,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="lbl">
+                    <td class="style11">
                         Book Photo :
                     </td>
-                    <td>
+                    <td class="style12">
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                         <br />
                         <asp:Image ID="Image1" runat="server" />
@@ -153,13 +164,18 @@
                     <td>
                         &nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:Button ID="btndelete" runat="server" Text="Delete book" />
+                        <asp:DropDownList ID="DropDownList3" runat="server">
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         &nbsp;</td>
                     <td>
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                            AllowPaging="True" AutoGenerateEditButton="True" 
+                            DataKeyNames="id,filepath" >
                             <Columns>
                                 <asp:BoundField DataField="bid" HeaderText="Book id" />
                                 <asp:ImageField DataImageUrlField="filepath" HeaderText="Image">
