@@ -1,0 +1,105 @@
+﻿<%@ Master Language="VB" CodeFile="librarymaster.master.vb" Inherits="librarymaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            font-family: "Book Antiqua";
+        }
+        .style3
+        {
+            text-align: center;
+        }
+        .style4
+        {
+            font-size: x-large;
+            font-weight: normal;
+        }
+        .style5
+        {
+            height: 653px;
+        }
+        .style6
+        {
+            width: 254px;
+            height: 653px;
+            margin-left: 40px;
+        }
+        .style7
+        {
+            height: 61px;
+        }
+    </style>
+</head>
+<body bgcolor="#ccffff">
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td class="style7" colspan="2">
+                <h1 class="style2">
+                    <strong>Library Management System</strong></h1>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#3399FF" class="style6" valign="top">
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/home.aspx">Dashboard</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/category.aspx">Category</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Searchbooks.aspx">Search Books</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Addbooks.aspx">Add Books</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AddStudent.aspx">Add Student</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink6" runat="server">Book Issue</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink7" runat="server">Book return</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink8" runat="server">Book report</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink9" runat="server">Student details</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink10" runat="server">Penalty</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink11" runat="server">Logout</asp:HyperLink>
+            </td>
+            <td class="style5">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p align="left" style="height: 712px">
+                        &nbsp;</p>
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td class="style3" colspan="2">
+                <h4 class="style4">
+                    copyright@1998</h4>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
