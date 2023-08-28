@@ -10,6 +10,27 @@
            color:black;
            }
            
+           .style8
+        {
+            text-align: right;
+            color: black;
+            height: 29px;
+        }
+        .style9
+        {
+            height: 29px;
+        }
+        .style10
+        {
+            text-align: right;
+            color: black;
+            height: 26px;
+        }
+        .style11
+        {
+            height: 26px;
+        }
+           
            </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -19,7 +40,7 @@
             Text="Add student"></asp:Label>
     </h2>
     <p>
-        &nbsp;</p>
+        </p>
     <p>
         <table align="center" class="style1">
             <tr>
@@ -35,16 +56,24 @@
                 </td>
                 <td>
                     <asp:DropDownList ID="drpbranch" runat="server" CssClass="txt">
+                        <asp:ListItem>Select branch</asp:ListItem>
+                        <asp:ListItem>It</asp:ListItem>
+                        <asp:ListItem>Management</asp:ListItem>
+                        <asp:ListItem>Mechanical</asp:ListItem>
+                        <asp:ListItem>Chemical</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style10">
                     Gender&nbsp; :
                 </td>
-                <td>
-                    <asp:RadioButton ID="rdomale" runat="server" Checked="True" Text="MALE" />
-                    <asp:RadioButton ID="rdofemale" runat="server" Text="FEMALE" />
+                <td align="left" class="style11">
+                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
+                        style="text-align: left">
+                        <asp:ListItem>Male</asp:ListItem>
+                        <asp:ListItem>Female</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
             </tr>
             <tr>
@@ -52,96 +81,27 @@
                     BirthDate :
                 </td>
                 <td>
-                    <asp:DropDownList ID="drpdd" runat="server">
-                        <asp:ListItem>DD</asp:ListItem>
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
-                        <asp:ListItem>6</asp:ListItem>
-                        <asp:ListItem>7</asp:ListItem>
-                        <asp:ListItem>8</asp:ListItem>
-                        <asp:ListItem>9</asp:ListItem>
-                        <asp:ListItem>10</asp:ListItem>
-                        <asp:ListItem>11</asp:ListItem>
-                        <asp:ListItem>12</asp:ListItem>
-                        <asp:ListItem>13</asp:ListItem>
-                        <asp:ListItem>14</asp:ListItem>
-                        <asp:ListItem>15</asp:ListItem>
-                        <asp:ListItem>16</asp:ListItem>
-                        <asp:ListItem>17</asp:ListItem>
-                        <asp:ListItem>18</asp:ListItem>
-                        <asp:ListItem>19</asp:ListItem>
-                        <asp:ListItem>20</asp:ListItem>
-                        <asp:ListItem>21</asp:ListItem>
-                        <asp:ListItem>22</asp:ListItem>
-                        <asp:ListItem>23</asp:ListItem>
-                        <asp:ListItem>24</asp:ListItem>
-                        <asp:ListItem>25</asp:ListItem>
-                        <asp:ListItem>26</asp:ListItem>
-                        <asp:ListItem>27</asp:ListItem>
-                        <asp:ListItem>28</asp:ListItem>
-                        <asp:ListItem>29</asp:ListItem>
-                        <asp:ListItem>30</asp:ListItem>
-                        <asp:ListItem>31</asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:DropDownList ID="drpmm" runat="server">
-                        <asp:ListItem>MM</asp:ListItem>
-                        <asp:ListItem>jan</asp:ListItem>
-                        <asp:ListItem>feb</asp:ListItem>
-                        <asp:ListItem>mar</asp:ListItem>
-                        <asp:ListItem>apr</asp:ListItem>
-                        <asp:ListItem>may</asp:ListItem>
-                        <asp:ListItem>jun</asp:ListItem>
-                        <asp:ListItem>jul</asp:ListItem>
-                        <asp:ListItem>aug</asp:ListItem>
-                        <asp:ListItem>sep</asp:ListItem>
-                        <asp:ListItem>oct</asp:ListItem>
-                        <asp:ListItem>nov</asp:ListItem>
-                        <asp:ListItem>dec</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:DropDownList ID="drpyyyy" runat="server">
-                        <asp:ListItem>YYYY</asp:ListItem>
-                        <asp:ListItem>1980</asp:ListItem>
-                        <asp:ListItem>1981</asp:ListItem>
-                        <asp:ListItem>1982</asp:ListItem>
-                        <asp:ListItem>1983</asp:ListItem>
-                        <asp:ListItem>1984</asp:ListItem>
-                        <asp:ListItem>1985</asp:ListItem>
-                        <asp:ListItem>1986</asp:ListItem>
-                        <asp:ListItem>1987</asp:ListItem>
-                        <asp:ListItem>1988</asp:ListItem>
-                        <asp:ListItem>1989</asp:ListItem>
-                        <asp:ListItem>1990</asp:ListItem>
-                        <asp:ListItem>1991</asp:ListItem>
-                        <asp:ListItem>1992</asp:ListItem>
-                        <asp:ListItem>1993</asp:ListItem>
-                        <asp:ListItem>1994</asp:ListItem>
-                        <asp:ListItem>1995</asp:ListItem>
-                        <asp:ListItem>1996</asp:ListItem>
-                        <asp:ListItem>1997</asp:ListItem>
-                        <asp:ListItem>1998</asp:ListItem>
-                        <asp:ListItem>1999</asp:ListItem>
-                        <asp:ListItem>2000</asp:ListItem>
-                        <asp:ListItem>2001</asp:ListItem>
-                    </asp:DropDownList>
+                    &nbsp;<asp:TextBox ID="txtdate" runat="server" CssClass="txt" Width="198px" 
+                            TextMode="Date"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style8">
                     Mobile :
                 </td>
-                <td>
-                    <asp:TextBox ID="txtmobile" runat="server" CssClass="txt"></asp:TextBox>
+                <td class="style9">
+                    <asp:DropDownList ID="drpbranch0" runat="server" CssClass="txt">
+                        <asp:ListItem>+91</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:TextBox ID="txtmobile" runat="server" CssClass="txt" MaxLength="10" 
+                        TextMode="Phone"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style8">
                     Address :
                 </td>
-                <td>
+                <td class="style9">
                     <asp:TextBox ID="txtaddress" runat="server" CssClass="txt"></asp:TextBox>
                 </td>
             </tr>
@@ -150,7 +110,53 @@
                     City :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtcity" runat="server" CssClass="txt"></asp:TextBox>
+                    <asp:DropDownList ID="drpcity" runat="server">
+                        <asp:ListItem>Select city</asp:ListItem>
+                        <asp:ListItem>Ahmedabad</asp:ListItem>
+                        <asp:ListItem>Amreli</asp:ListItem>
+                        <asp:ListItem>Anand</asp:ListItem>
+                        <asp:ListItem>Aravalli</asp:ListItem>
+                        <asp:ListItem>Banaskantha</asp:ListItem>
+                        <asp:ListItem>Bharuch</asp:ListItem>
+                        <asp:ListItem>Bhavnagar</asp:ListItem>
+                        <asp:ListItem>Botad</asp:ListItem>
+                        <asp:ListItem>Chhota Udaipur</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
@@ -162,10 +168,10 @@
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style8">
                     Photo :
                 </td>
-                <td>
+                <td class="style9">
                     <asp:FileUpload ID="FileUpload1" runat="server" />
                 </td>
             </tr>
@@ -174,15 +180,15 @@
                     Email :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtemail" runat="server" CssClass="txt"></asp:TextBox>
+                    <asp:TextBox ID="txtemail" runat="server" CssClass="txt" TextMode="Email"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style8">
                     Password :
                 </td>
-                <td>
-                    <asp:TextBox ID="txtpass" runat="server" CssClass="txt"></asp:TextBox>
+                <td class="style9">
+                    <asp:TextBox ID="txtpass" runat="server" CssClass="lbl" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -197,7 +203,26 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:Label ID="lblmsg" runat="server"></asp:Label>
+                    <asp:Label ID="lblmsg" runat="server" ForeColor="Red"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    <br />
+                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
+                        Height="50px" Width="125px">
+                        <Fields>
+                            <asp:BoundField DataField="sname" HeaderText="Student Name" />
+                            <asp:BoundField DataField="branch" HeaderText="Branch" />
+                            <asp:BoundField DataField="gender" HeaderText="Gender" />
+                            <asp:BoundField DataField="birthdate" HeaderText="Birthdate" />
+                            <asp:BoundField DataField="mono" HeaderText="Mobile no" />
+                            <asp:BoundField DataField="city" HeaderText="City" />
+                            <asp:BoundField DataField="pincode" HeaderText="Pincode" />
+                        </Fields>
+                    </asp:DetailsView>
                 </td>
             </tr>
         </table>

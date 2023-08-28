@@ -32,7 +32,7 @@ Partial Class Addbooks
             Else
                 lblmsg.Text = "select image"
             End If
-            cmd.CommandText = "insert into tbladdbook values('" & filepath & "','" & txtbname.Text & "','" & txtauthor.Text & "','" & DropDownList1.SelectedItem.ToString & "','" & txtpublisher.Text & "','" & txtdate.Text & "'," & txtprice.Text & ",'" & DropDownList2.SelectedItem.ToString & "','" & txtdetail.Text & "')"
+            cmd.CommandText = "insert into tbladdbook values('" & filepath & "','" & txtbname.Text & "','" & txtauthor.Text & "','" & DropDownList1.SelectedItem.Text & "','" & txtpublisher.Text & "','" & txtdate.Text & "'," & txtprice.Text & ",'" & DropDownList2.SelectedItem.Text & "','" & txtdetail.Text & "')"
             con.Open()
             cmd.ExecuteNonQuery()
             con.Close()
@@ -61,14 +61,14 @@ Partial Class Addbooks
 
     End Sub
 
-    'Protected Sub GridView1_RowCancelingEdit(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCancelEditEventArgs) Handles GridView1.RowCancelingEdit
-    '    GridView1.EditIndex = -1
-    '    fillgrid()
-    'End Sub
+    Protected Sub GridView1_RowCancelingEdit(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCancelEditEventArgs) Handles GridView1.RowCancelingEdit
+        GridView1.EditIndex = -1
+        fillgrid()
+    End Sub
 
    
     Protected Sub GridView1_RowDeleting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewDeleteEventArgs) Handles GridView1.RowDeleting
-        'Try
+        Try
         Dim vid As Integer = GridView1.DataKeys(e.RowIndex).Value
         Dim vimage As String = GridView1.DataKeys(e.RowIndex).Values("filepath").ToString
 
@@ -83,39 +83,52 @@ Partial Class Addbooks
         If File.Exists(fileexist) Then
             File.Delete(fileexist)
         End If
-        'Catch ex As Exception
-        '    lblmsg.Text = ex.Message
-        'End Try
+        Catch ex As Exception
+            lblmsg.Text = ex.Message
+        End Try
     End Sub
 
-    'Protected Sub GridView1_RowEditing(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewEditEventArgs) Handles GridView1.RowEditing
-    '    GridView1.EditIndex = e.NewEditIndex
-    '    fillgrid()
-    'End Sub
+    Protected Sub GridView1_RowEditing(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewEditEventArgs) Handles GridView1.RowEditing
+        GridView1.EditIndex = e.NewEditIndex
+        fillgrid()
+    End Sub
 
-    'Protected Sub GridView1_RowUpdating(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewUpdateEventArgs) Handles GridView1.RowUpdating
-    '    Try
-    '        Dim vbname, vauthor, vpublisher, vupdate, vprice, vdesc As New TextBox
-    '        Dim vqty, vcategory As New DropDownList
-    '        Dim vid As Integer = GridView1.DataKeys(e.RowIndex).Value
+    Protected Sub GridView1_RowUpdating(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewUpdateEventArgs) Handles GridView1.RowUpdating
+        Try
 
-    '        vbname = GridView1.Rows(e.RowIndex).Cells(3).Controls(0)
-    '        vauthor = GridView1.Rows(e.RowIndex).Cells(4).Controls(0)
-    '        vcategory = GridView1.Rows(e.RowIndex).Cells(5).Controls(0)
-    '        vpublisher = GridView1.Rows(e.RowIndex).Cells(6).Controls(0)
-    '        vupdate = GridView1.Rows(e.RowIndex).Cells(7).Controls(0)
-    '        vprice = GridView1.Rows(e.RowIndex).Cells(8).Controls(0)
-    '        vqty = GridView1.Rows(e.RowIndex).Cells(9).Controls(0)
-    '        vdesc = GridView1.Rows(e.RowIndex).Cells(10).Controls(0)
+            Dim vbname, vauthor, vpublisher, vupdate, vprice, vdesc, vqty, vcategory As New TextBox
+            'Dim vqty, vcategory As New DropDownList
+            'vqty.Items.Add("Programming")
+            'vqty.Items.Add("History")
+            'vqty.Items.Add("Biography")
+            'vqty.Items.Add("Science")
+            'vqty.Items.Add("Drama")
+            'vqty.Items.Add("Mystry")
+            'vqty.Items.Add("Short story")
+            'vqty.Items.Add("Logic bulding")
+            Dim vid As Integer = GridView1.DataKeys(e.RowIndex).Value
 
-    '        cmd.CommandText = "update tblusermst set bname = '" & vbname.Text & "',author ='" & vauthor.Text & "',category = '" & vcategory.ToString & "',publisher='" & vpublisher.Text & "',entrydate='" & vupdate.Text & "',price=" & vprice.Text & ",quantity=" & vqty.Text & ",description='" & vdesc.ToString & "' where bid = " & vid & ""
-    '        con.Open()
-    '        cmd.ExecuteNonQuery()
-    '        con.Close()
-    '        lblmsg.Text = "Record update"
-    '        fillgrid()
-    '    Catch ex As Exception
-    '        lblmsg.Text = ex.Message
-    '    End Try
-    'End Sub
+            vbname = GridView1.Rows(e.RowIndex).Cells(3).Controls(0)
+            vauthor = GridView1.Rows(e.RowIndex).Cells(4).Controls(0)
+            vcategory = GridView1.Rows(e.RowIndex).Cells(5).Controls(0)
+            vpublisher = GridView1.Rows(e.RowIndex).Cells(6).Controls(0)
+            vupdate = GridView1.Rows(e.RowIndex).Cells(7).Controls(0)
+            vprice = GridView1.Rows(e.RowIndex).Cells(8).Controls(0)
+            vqty = GridView1.Rows(e.RowIndex).Cells(9).Controls(0)
+            vdesc = GridView1.Rows(e.RowIndex).Cells(10).Controls(0)
+
+
+
+            cmd.CommandText = "update tbladdbook set bname = '" & vbname.Text & "',author ='" & vauthor.Text & "',category = '" & vcategory.Text & "',publisher='" & vpublisher.Text & "',entrydate='" & vupdate.Text & "',price=" & vprice.Text & ",quantity=" & vqty.Text & ",description='" & vdesc.Text & "' where bid = " & vid & ""
+            con.Open()
+            cmd.ExecuteNonQuery()
+            con.Close()
+            lblmsg.Text = "Record update"
+            fillgrid()
+        Catch ex As Exception
+            lblmsg.Text = ex.Message
+        End Try
+    End Sub
+
+    
 End Class

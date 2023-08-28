@@ -31,7 +31,7 @@
         }
         .style6
         {
-            width: 254px;
+            width: 99px;
             height: 653px;
             margin-left: 40px;
         }
@@ -54,7 +54,8 @@
             <td bgcolor="#3399FF" class="style6" valign="top">
                 <br />
                 <br />
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/home.aspx">Dashboard</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/home.aspx" 
+                    CssClass="style1" Font-Bold="True" ForeColor="White">Dashboard</asp:HyperLink>
                 <br />
                 <br />
                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/category.aspx">Category</asp:HyperLink>
@@ -69,7 +70,7 @@
                 <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AddStudent.aspx">Add Student</asp:HyperLink>
                 <br />
                 <br />
-                <asp:HyperLink ID="HyperLink6" runat="server">Book Issue</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Issuebook.aspx">Book Issue</asp:HyperLink>
                 <br />
                 <br />
                 <asp:HyperLink ID="HyperLink7" runat="server">Book return</asp:HyperLink>
