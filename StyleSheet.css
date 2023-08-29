@@ -1,1 +1,36 @@
-﻿
+﻿body
+{
+ 
+background:#FFF;
+    font-family:Bahnschrift SemiBold;
+    
+ }
+.hyperlink
+{
+                    fore-color:black;
+                   color:#000000;
+                   font-weight:bold;
+                   width:100px;
+                   height:40px;
+                   font-size:20px; 
+    }
+    .style11
+    {
+        font-size: x-large; font-family: 'Century Gothic'; font-weight: bold; color: #000000; background-color: #FFFFFF; border: medium solid #66FFFF}
+        
+        .data
+        {
+            text-align:center;
+            }
+            
+            .bound
+            {
+                   color:Navy;
+                   font-size:20px;            
+                }
+ .font
+ {
+    font-size:xx-large;
+    color:Green;
+    border:2 solid black ;
+     }

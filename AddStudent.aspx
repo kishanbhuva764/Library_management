@@ -26,18 +26,14 @@
             color: black;
             height: 26px;
         }
-        .style11
-        {
-            height: 26px;
-        }
-           
+                   
            </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h2>
         <asp:Label ID="Label1" runat="server" 
             style="font-weight: 700; font-family: Arial; text-align: left" 
-            Text="Add student"></asp:Label>
+            Text="Add student" CssClass="newStyle1"></asp:Label>
     </h2>
     <p>
         </p>
@@ -57,10 +53,7 @@
                 <td>
                     <asp:DropDownList ID="drpbranch" runat="server" CssClass="txt">
                         <asp:ListItem>Select branch</asp:ListItem>
-                        <asp:ListItem>It</asp:ListItem>
-                        <asp:ListItem>Management</asp:ListItem>
-                        <asp:ListItem>Mechanical</asp:ListItem>
-                        <asp:ListItem>Chemical</asp:ListItem>
+                        <asp:ListItem>Information Technology</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -68,7 +61,7 @@
                 <td class="style10">
                     Gender&nbsp; :
                 </td>
-                <td align="left" class="style11">
+                <td align="left" class="lbl">
                     <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
                         style="text-align: left">
                         <asp:ListItem>Male</asp:ListItem>
@@ -90,9 +83,6 @@
                     Mobile :
                 </td>
                 <td class="style9">
-                    <asp:DropDownList ID="drpbranch0" runat="server" CssClass="txt">
-                        <asp:ListItem>+91</asp:ListItem>
-                    </asp:DropDownList>
                     <asp:TextBox ID="txtmobile" runat="server" CssClass="txt" MaxLength="10" 
                         TextMode="Phone"></asp:TextBox>
                 </td>
@@ -112,50 +102,6 @@
                 <td>
                     <asp:DropDownList ID="drpcity" runat="server">
                         <asp:ListItem>Select city</asp:ListItem>
-                        <asp:ListItem>Ahmedabad</asp:ListItem>
-                        <asp:ListItem>Amreli</asp:ListItem>
-                        <asp:ListItem>Anand</asp:ListItem>
-                        <asp:ListItem>Aravalli</asp:ListItem>
-                        <asp:ListItem>Banaskantha</asp:ListItem>
-                        <asp:ListItem>Bharuch</asp:ListItem>
-                        <asp:ListItem>Bhavnagar</asp:ListItem>
-                        <asp:ListItem>Botad</asp:ListItem>
-                        <asp:ListItem>Chhota Udaipur</asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -185,11 +131,9 @@
             </tr>
             <tr>
                 <td class="style8">
-                    Password :
-                </td>
+                    &nbsp;</td>
                 <td class="style9">
-                    <asp:TextBox ID="txtpass" runat="server" CssClass="lbl" TextMode="Password"></asp:TextBox>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td>
@@ -211,18 +155,6 @@
                     &nbsp;</td>
                 <td>
                     <br />
-                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
-                        Height="50px" Width="125px">
-                        <Fields>
-                            <asp:BoundField DataField="sname" HeaderText="Student Name" />
-                            <asp:BoundField DataField="branch" HeaderText="Branch" />
-                            <asp:BoundField DataField="gender" HeaderText="Gender" />
-                            <asp:BoundField DataField="birthdate" HeaderText="Birthdate" />
-                            <asp:BoundField DataField="mono" HeaderText="Mobile no" />
-                            <asp:BoundField DataField="city" HeaderText="City" />
-                            <asp:BoundField DataField="pincode" HeaderText="Pincode" />
-                        </Fields>
-                    </asp:DetailsView>
                 </td>
             </tr>
         </table>

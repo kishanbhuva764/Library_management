@@ -11,10 +11,7 @@
         .style1
         {
             width: 100%;
-        }
-        .style2
-        {
-            font-family: "Book Antiqua";
+            margin-right: 105px;
         }
         .style3
         {
@@ -29,70 +26,136 @@
         {
             height: 653px;
         }
-        .style6
+        .newStyle1
         {
-            width: 99px;
-            height: 653px;
-            margin-left: 40px;
+            font-family: "Bahnschrift SemiBold";
+            font-size: xx-large;
         }
-        .style7
+        .style13
         {
-            height: 61px;
+            width: 100%;
+        }
+        .style14
+        {
+            width: 102px;
+        }
+        .style15
+        {
+            font-size: xx-large;
+        }
+        .style18
+        {
+            width: 217px;
+        }
+        .style19
+        {
+            width: 5px;
         }
     </style>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body bgcolor="#ccffff">
     <form id="form1" runat="server">
     <table class="style1">
         <tr>
-            <td class="style7" colspan="2">
-                <h1 class="style2">
-                    <strong>Library Management System</strong></h1>
+            <td class="style1" colspan="2">
+                <table class="style13">
+                    <tr>
+                        <td class="style14" style="border: medium solid #000000; padding: 10px">
+                            <asp:Image ID="Image1" runat="server" BorderColor="White" BorderStyle="Solid" 
+                                BorderWidth="2px" Height="100px" ImageUrl="~/images/logo.png" Width="100px" />
+                        </td>
+                        <td class="style15" align="left" 
+                            style="border: medium solid #000000; background-color: #99CCFF">
+                            <asp:Label ID="Label3" runat="server" ForeColor="Black" 
+                                Text="Library Management System"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>
-            <td bgcolor="#3399FF" class="style6" valign="top">
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/home.aspx" 
-                    CssClass="style1" Font-Bold="True" ForeColor="White">Dashboard</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/category.aspx">Category</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Searchbooks.aspx">Search Books</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Addbooks.aspx">Add Books</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AddStudent.aspx">Add Student</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Issuebook.aspx">Book Issue</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink7" runat="server">Book return</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink8" runat="server">Book report</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink9" runat="server">Student details</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink10" runat="server">Penalty</asp:HyperLink>
-                <br />
-                <br />
-                <asp:HyperLink ID="HyperLink11" runat="server">Logout</asp:HyperLink>
-            </td>
-            <td class="style5">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    <p align="left" style="height: 712px">
+            <td bgcolor="White" valign="top" align="left" width="200">
+                <table class="style13">
+                    <tr>
+                        <td class="style18">
+                            <asp:Label ID="Label2" runat="server" Font-Size="25pt" Text="Welcome"></asp:Label>
+                            <strong><span class="style14">,</span><asp:Label 
+                                ID="Label1" runat="server" Text="Label" CssClass="style14" 
+            style="color: #FF3300; font-size: x-large;"></asp:Label>
+                            </strong>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                        <td class="style19">
+                            &nbsp;</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style18">
+                            <asp:Button ID="Button4" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/home.aspx" Text="Dashboard" 
+                                Width="150px" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button2" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/Addbooks.aspx" Text="Add Book" 
+                                Width="150px" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button5" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/AddStudent.aspx" 
+                                Text="Add Student" Width="150px" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button6" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/searchbook.aspx" 
+                                Text="Search Book" Width="150px" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button7" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/Issuebook.aspx" 
+                                Text="Book issue" Width="150px" />
+                        </td>
+                        <td class="style18">
+                            <asp:Button ID="Button8" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/Searchbooks.aspx" 
+                                Text="Student details" Width="150px" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button9" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/login.aspx" Text="Logout" 
+                                Width="150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p align="left" style="height: 712px; background-color: #FFFFCC;">
+                        &nbsp;</p>
+                    <p align="left" style="height: 712px; width: 1003px;">
                         &nbsp;</p>
                 </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
             </td>
+            <td class="style5">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="style3" colspan="2">

@@ -37,6 +37,7 @@ Partial Class Addbooks
             cmd.ExecuteNonQuery()
             con.Close()
             lblmsg.Text = "Record inserted"
+            fillgrid()
         Catch ex As Exception
             lblmsg.Text = ex.Message
         End Try
@@ -131,4 +132,7 @@ Partial Class Addbooks
     End Sub
 
     
+    Protected Sub DropDownList1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DropDownList1.SelectedIndexChanged
+
+    End Sub
 End Class

@@ -92,14 +92,16 @@
             <td bgcolor="White" class="style15">
                 Password :</td>
                 <td>
-                <asp:TextBox ID="txtpwd" runat="server" Height="26px" Width="164px"></asp:TextBox>
+                <asp:TextBox ID="txtpwd" runat="server" Height="26px" Width="164px" 
+                        TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
             <td bgcolor="White" class="style12">
                 Conform Password :</td>
                 <td>
-                <asp:TextBox ID="txtcpwd" runat="server" Height="26px" Width="164px"></asp:TextBox>
+                <asp:TextBox ID="txtcpwd" runat="server" Height="26px" Width="164px" 
+                        TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -113,7 +115,8 @@
             <td bgcolor="White" style="text-align: right">
                 Mobile no.&nbsp; :</td>
                 <td>
-                <asp:TextBox ID="txtmo" runat="server" Height="26px" Width="164px"></asp:TextBox>
+                <asp:TextBox ID="txtmo" runat="server" Height="26px" Width="164px" MaxLength="10" 
+                        TextMode="Phone"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -128,7 +131,8 @@
             <td align="right" bgcolor="White">
                 Date of Birth:</td>
                 <td>
-                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                    <asp:TextBox ID="txtdate" runat="server" Height="26px" TextMode="Date" 
+                        Width="164px"></asp:TextBox>
                 </td>
             </tr>
             <tr>

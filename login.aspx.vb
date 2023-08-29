@@ -30,20 +30,25 @@ Partial Class login
     Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click
         Try
             con.Open()
-
+            Session("uname") = txtuname.Text
             If txtsid.Text.Trim = "" Then
                 lblmsg.Text = "Enter sid"
             ElseIf txtpwd.Text.Trim = " " Then
                 lblmsg.Text = "Enter password"
             Else
 
-                
+
                 cmd.CommandText = "select pwd from tblstudent where sid= " & txtsid.Text & " "
                 Dim pwd = cmd.ExecuteScalar()
                 con.Close()
 
                 If pwd.Equals(txtpwd.Text) Then
-                    Response.Redirect("home1.aspx")
+                    If txtsid.Text = "700" And txtpwd.Text = "admin" Then
+                        Response.Redirect("home.aspx")
+                    Else
+                        Response.Redirect("Studdashboard.aspx")
+                    End If
+
                     Session("isLogin") = True
                     Session("Uname") = txtuname.Text
                     Session("sid") = txtsid.Text

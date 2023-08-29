@@ -22,7 +22,7 @@
         {
             text-align: right;
             height: 30px;
-            width: 445px;
+            width: 771px;
         }
         .style14
         {
@@ -31,13 +31,13 @@
         .style12
         {
             text-align: right;
-            width: 445px;
+            width: 771px;
         }
         .style15
         {
             text-align: right;
             height: 27px;
-            width: 445px;
+            width: 771px;
         }
         .style16
         {
@@ -45,7 +45,7 @@
         }
         .style17
         {
-            width: 445px;
+            width: 771px;
         }
         .style21
         {
@@ -56,20 +56,32 @@
         {
             font-size: x-large;
         }
-        .style23
-        {
-            font-family: "Segoe UI Variable Display Semib";
-        }
         .style24
         {
-            width: 445px;
+            width: 771px;
             height: 26px;
         }
         .style25
         {
             height: 26px;
         }
+        .style26
+        {
+            font-family: "Segoe UI Variable Display Semib";
+            font-size: xx-large;
+        }
+        .style27
+        {
+            text-align: right;
+            height: 37px;
+            width: 771px;
+        }
+        .style28
+        {
+            height: 37px;
+        }
         </style>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="height: 706px">
     <form id="form1" runat="server">
@@ -77,10 +89,9 @@
     
     <table class="style19">
         <tr>
-            <td colspan="2">
+            <td colspan="2" align="center">
                 <span class="style22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="style23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
-                <span class="style21">&nbsp; Login Here </span>
+                </span><span class="style26">Login Here</span><span class="style21"> </span>
             </td>
         </tr>
         <tr>
@@ -91,12 +102,9 @@
         </tr>
         <tr>
             <td bgcolor="White" class="style13">
-                Login as :</td>
+                User Name&nbsp; :</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem>Admin</asp:ListItem>
-                    <asp:ListItem>Student</asp:ListItem>
-                </asp:DropDownList>
+                <asp:TextBox ID="txtuname" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -119,10 +127,10 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td bgcolor="White" class="style12">
-                User Name&nbsp; :</td>
-            <td>
-                <asp:TextBox ID="txtuname" runat="server"></asp:TextBox>
+            <td bgcolor="White" class="style27">
+                Password :</td>
+            <td class="style28">
+                <asp:TextBox ID="txtpwd" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -133,10 +141,9 @@
         </tr>
         <tr>
             <td bgcolor="White" class="style15">
-                Password :</td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtpwd" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="style24">
@@ -161,7 +168,7 @@
             <td bgcolor="White" class="style13">
                 &nbsp;</td>
             <td bgcolor="White" class="style14">
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/register.aspx">i want to register.</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/register.aspx">I want to register.</asp:HyperLink>
             </td>
         </tr>
         <tr>
