@@ -38,7 +38,7 @@ Partial Class login
             Else
 
 
-                cmd.CommandText = "select pwd from tblstudent where sid= " & txtsid.Text & " "
+                cmd.CommandText = "select pass from tblstudregister where sid= " & txtsid.Text & " "
                 Dim pwd = cmd.ExecuteScalar()
                 con.Close()
 
@@ -46,11 +46,11 @@ Partial Class login
                     If txtsid.Text = "700" And txtpwd.Text = "admin" Then
                         Response.Redirect("home.aspx")
                     Else
-                        Response.Redirect("Studdashboard.aspx")
+                        Response.Redirect("~/Student/dashboard.aspx")
                     End If
 
                     Session("isLogin") = True
-                    Session("Uname") = txtuname.Text
+                    Session("uname") = txtuname.Text
                     Session("sid") = txtsid.Text
 
 

@@ -34,3 +34,20 @@ background:#FFF;
     color:Green;
     border:2 solid black ;
      }
+     
+     .stud
+     {
+         
+         height:25px;
+         color:blue;
+         font-size:x-large;
+        
+     }
+  .studfoot
+     {
+        vertical-align:middle;
+       
+         color:black;
+         font-size:x-large;
+        
+         }

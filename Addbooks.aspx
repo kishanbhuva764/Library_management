@@ -53,8 +53,7 @@
         {
             text-align: right;
             color: black;
-            width: 10%;
-        }
+            }
         .style18
         {
             text-align: right;
@@ -71,26 +70,22 @@
             height: 33px;
             width: 10%;
         }
-        .style21
-        {
-            width: 10%;
-            margin-right: 105px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <table class="tbl">
     <tr>
-        <td class="style4">
-            <strong>ADD NEW BOOK<br />
-            </strong></td>
-    </tr>
-    <tr>
-        <td class="style5">
-            <table align="center" class="style1">
+        <td class="style5" align="left">
+            <table align="center" class="style1" style="margin-top: 15px">
                 <tr>
-                    <td class="style21" align="left">
+                    <td class="style10" align="left" colspan="2" 
+                        style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC">
+                        <asp:Label ID="Label4" runat="server" Text="Add New Book"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style17" align="left">
                         BookName :</td>
                     <td class="style9">
                         <asp:TextBox ID="txtbname" runat="server" CssClass="txt" Width="197px"></asp:TextBox>
@@ -171,7 +166,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style21" align="left">
+                    <td class="style17" align="left">
                         Book Photo :
                     </td>
                     <td class="style12">

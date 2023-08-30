@@ -16,10 +16,6 @@
             width: 179px;
             height: 26px;
         }
-        .style11
-        {
-            height: 26px;
-        }
         .style12
         {
             width: 179px;
@@ -28,6 +24,10 @@
         .style13
         {
             height: 33px;
+        }
+        .style20
+        {
+            height: 26px;
         }
     </style>
 </asp:Content>
@@ -54,7 +54,7 @@
             <td class="style10">
     <asp:Label ID="Label2" runat="server" Text="Book id"></asp:Label>
             </td>
-            <td class="style11">
+            <td class="style20">
                 <asp:TextBox ID="txtbookid" runat="server"></asp:TextBox>
 &nbsp;<asp:Button ID="btnselect" runat="server" Text="Go" />
             </td>
@@ -90,7 +90,7 @@
         <tr>
             <td class="style10">
             </td>
-            <td class="style11">
+            <td>
             </td>
         </tr>
         <tr>
@@ -151,7 +151,7 @@
         <tr>
             <td class="style10">
             </td>
-            <td class="style11">
+            <td>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="studentid" HeaderText="Student id" />

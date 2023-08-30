@@ -48,6 +48,10 @@
         {
             height: 32px;
         }
+        .style20
+        {
+            height: 27px;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +95,7 @@
             <tr>
             <td bgcolor="White" class="style15">
                 Password :</td>
-                <td>
+                <td class="style20">
                 <asp:TextBox ID="txtpwd" runat="server" Height="26px" Width="164px" 
                         TextMode="Password"></asp:TextBox>
                 </td>
@@ -102,6 +106,14 @@
                 <td>
                 <asp:TextBox ID="txtcpwd" runat="server" Height="26px" Width="164px" 
                         TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+            <td bgcolor="White" class="style12">
+                City :</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
@@ -123,8 +135,10 @@
             <td bgcolor="White" class="style12">
                 Gender :</td>
                 <td>
-                <asp:RadioButton ID="rdbmale" runat="server" GroupName="g" Text="Male" />
-                <asp:RadioButton ID="rdbfemale" runat="server" GroupName="g" Text="Female" />
+                    <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                        <asp:ListItem>Male</asp:ListItem>
+                        <asp:ListItem>Female</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
             </tr>
             <tr>

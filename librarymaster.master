@@ -96,7 +96,11 @@
                         <td class="style19">
                             &nbsp;</td>
                         <td>
-                            &nbsp;</td>
+                            <asp:Button ID="Button10" runat="server" BackColor="#0099FF" BorderColor="Black" 
+                                BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/Student/dashboard.aspx" Text="Student" 
+                                Width="150px" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="style18">
@@ -132,7 +136,7 @@
                         <td class="style18">
                             <asp:Button ID="Button8" runat="server" BackColor="#0099FF" BorderColor="Black" 
                                 BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
-                                ForeColor="White" Height="50px" PostBackUrl="~/Searchbooks.aspx" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/Studentdetails.aspx" 
                                 Text="Student details" Width="150px" />
                         </td>
                         <td>

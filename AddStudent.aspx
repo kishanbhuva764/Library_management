@@ -15,6 +15,7 @@
             text-align: right;
             color: black;
             height: 29px;
+            width: 104px;
         }
         .style9
         {
@@ -25,29 +26,55 @@
             text-align: right;
             color: black;
             height: 26px;
+            width: 104px;
+        }
+                   
+           .style21
+        {
+            width: 217px;
+            height: 81px;
+        }
+        .txt
+        {
+            margin-left: 8px;
+        }
+        .style22
+        {
+            text-align: right;
+            color: black;
+            width: 104px;
+        }
+        .style23
+        {
+            width: 104px;
         }
                    
            </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>
-        <asp:Label ID="Label1" runat="server" 
-            style="font-weight: 700; font-family: Arial; text-align: left" 
-            Text="Add student" CssClass="newStyle1"></asp:Label>
-    </h2>
-    <p>
-        </p>
     <p>
         <table align="center" class="style1">
             <tr>
-                <td class="lbl">
-                    Student Name :</td>
+                <td class="style21" colspan="2" 
+                    style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC">
+                    <asp:Label ID="Label4" runat="server" Text="Add new student"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="style22" align="left">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                    <td class="style23" align="left">
+                        BookName :</td>
                 <td>
                     <asp:TextBox ID="txtsname" runat="server" CssClass="txt"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style22" align="left">
                     Branch :
                 </td>
                 <td>
@@ -58,7 +85,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style10">
+                <td class="style10" align="left">
                     Gender&nbsp; :
                 </td>
                 <td align="left" class="lbl">
@@ -70,7 +97,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style22" align="left">
                     BirthDate :
                 </td>
                 <td>
@@ -79,7 +106,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style8">
+                <td class="style8" align="left">
                     Mobile :
                 </td>
                 <td class="style9">
@@ -88,7 +115,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style8">
+                <td class="style8" align="left">
                     Address :
                 </td>
                 <td class="style9">
@@ -96,7 +123,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style22" align="left">
                     City :
                 </td>
                 <td>
@@ -106,7 +133,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style22" align="left">
                     Pincode :
                 </td>
                 <td>
@@ -114,7 +141,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style8">
+                <td class="style8" align="left">
                     Photo :
                 </td>
                 <td class="style9">
@@ -122,7 +149,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="lbl">
+                <td class="style22" align="left">
                     Email :
                 </td>
                 <td>
@@ -136,7 +163,7 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td>
+                <td class="style23">
                     &nbsp;</td>
                 <td>
                     <asp:Button ID="btnadd" runat="server" CssClass="btn" onclick="btnadd_Click" 
@@ -144,14 +171,14 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="style23">
                     &nbsp;</td>
                 <td>
                     <asp:Label ID="lblmsg" runat="server" ForeColor="Red"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="style23">
                     &nbsp;</td>
                 <td>
                     <br />

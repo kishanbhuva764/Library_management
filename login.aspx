@@ -103,7 +103,7 @@
         <tr>
             <td bgcolor="White" class="style13">
                 User Name&nbsp; :</td>
-            <td>
+            <td class="style14">
                 <asp:TextBox ID="txtuname" runat="server"></asp:TextBox>
             </td>
         </tr>

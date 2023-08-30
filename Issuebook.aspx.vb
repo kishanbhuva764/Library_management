@@ -22,18 +22,18 @@ Partial Class Issuebook
         End If
     End Sub
 
-    'Sub fillgrid()
-    '    Try
-    '        cmd.CommandText = "select * from tblissuebook order by id"
-    '        da = New SqlDataAdapter(cmd)
-    '        dt = New DataTable
-    '        da.Fill(dt)
-    '        GridView1.DataSource = dt
-    '        GridView1.DataBind()
-    '    Catch ex As Exception
-    '        Label1.Text = ex.Message
-    '    End Try
-    'End Sub
+    'sub fillgrid()
+    '    try
+    '        cmd.commandtext = "select * from tblissuebook order by id"
+    '        da = new sqldataadapter(cmd)
+    '        dt = new datatable
+    '        da.fill(dt)
+    '        gridview1.datasource = dt
+    '        gridview1.databind()
+    '    catch ex as exception
+    '        label1.text = ex.message
+    '    end try
+    'end sub
 
     Protected Sub btnselect_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnselect.Click
         Try
@@ -52,25 +52,17 @@ Partial Class Issuebook
 
     Sub getname()
         Try
+            con.Open()
             cmd.CommandText = "select bname from tbladdbook where bid =" & txtbookid.Text & " "
-            con.Open()
-            cmd.ExecuteNonQuery()
+            Dim bname = cmd.ExecuteScalar()
+            bname = txtbname.Text
+
+
+            cmd.CommandText = "select uname from tblstudregister where sid =" & txtstudid.Text & " "
+            Dim uname = cmd.ExecuteScalar()
+            uname = txtsname.Text
             con.Close()
 
-            If (dt.Rows.Count >= 1) Then
-                txtbname.Text = "bname"
-
-            End If
-
-            cmd.CommandText = "select uname from tbladdbook where sid =" & txtstudid.Text & " "
-            con.Open()
-            cmd.ExecuteNonQuery()
-            con.Close()
-
-            If (dt.Rows.Count >= 1) Then
-                txtsname.Text = "uname"
-            End If
-            'fillgrid()
 
         Catch ex As Exception
             Label7.Text = ex.Message
