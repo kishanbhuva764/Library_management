@@ -14,11 +14,12 @@
         <td colspan="2" 
             
             style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC" 
-            align="center" valign="middle">
+            align="left" valign="middle" bgcolor="#FFCC66">
+            &nbsp;
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="25pt" 
-    Text="Search books" BorderColor="Black" BorderStyle="Solid" BorderWidth="3px" 
-                Height="60px" Width="400px"></asp:Label>
-        </td>
+    Text="Search books" 
+                Height="55px" Width="265px" style="color: #FF6600" ForeColor="#FF6600"></asp:Label>
+            &nbsp;</td>
     </tr>
     <tr>
         <td>
@@ -27,7 +28,7 @@
             &nbsp;</td>
     </tr>
     <tr>
-        <td colspan="2" align="center" class="style20">
+        <td colspan="2" align="left" class="style20">
             <asp:Label ID="Label2" runat="server" Text="Book name :"></asp:Label>
 &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtsearch" runat="server" AutoCompleteType="FirstName" 
@@ -36,7 +37,7 @@
         </td>
     </tr>
     <tr>
-        <td align="center">
+        <td align="left">
             <asp:Button ID="btnsearch" runat="server" Text="Search" />
         </td>
         <td>
@@ -82,48 +83,12 @@
         </tr>
          </table>
          </td>
-            </tr>
-            </table>
-            <tr>
-            <td>
-            &nbsp;</td>
-</tr>
+
+           
             </ItemTemplate>
             </asp:Repeater>
         </td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-    </tr>
+  
 </table>
 </asp:Content>
 

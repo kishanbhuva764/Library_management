@@ -8,12 +8,28 @@ Partial Class Issuebook
     Dim da As New SqlDataAdapter
     Dim dt As New DataTable
     Dim constring As String = ConfigurationManager.ConnectionStrings("constring").ToString
-
+    Sub clear()
+        txtstudid.Text = ""
+        txtsname.Text = ""
+        DropDownList1.SelectedIndex = 0
+        txtissuedate.Text = ""
+        txtreturndate.Text = ""
+      
+    End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         Try
             con.ConnectionString = constring
             cmd.Connection = con
+            cmd.CommandText = "select bname from tbladdbook"
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            DropDownList1.DataSource = dt
+            DropDownList1.DataTextField = "bname"
+            DropDownList1.DataValueField = "bname"
+            DropDownList1.DataBind()
         Catch ex As Exception
             Label7.Text = ex.Message
         End Try
@@ -35,38 +51,27 @@ Partial Class Issuebook
     '    end try
     'end sub
 
-    Protected Sub btnselect_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnselect.Click
+    Protected Sub btngo_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btngo.Click
         Try
-            'cmd.CommandText = "insert into tblissuebook values(" & txtstudid.Text & "," & txtbookid.Text & ",'" & txtsname.Text & "','" & txtbname.Text & "','" & txtissuedate.Text & "','" & txtreturndate.Text & "')"
-            'con.Open()
-            'cmd.ExecuteNonQuery()
-            'con.Close()
-            'Label7.Text = "Record inserted"
-            getname()
-
-        Catch ex As Exception
-            Label7.Text = ex.Message
-        End Try
-    End Sub
-
-
-    Sub getname()
-        Try
+            cmd.CommandText = "select fname from tblstudregister where sid = " & txtstudid.Text & ""
             con.Open()
-            cmd.CommandText = "select bname from tbladdbook where bid =" & txtbookid.Text & " "
-            Dim bname = cmd.ExecuteScalar()
-            bname = txtbname.Text
-
-
-            cmd.CommandText = "select uname from tblstudregister where sid =" & txtstudid.Text & " "
-            Dim uname = cmd.ExecuteScalar()
-            uname = txtsname.Text
+            txtsname.Text = cmd.ExecuteScalar()
             con.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 
-
+    Protected Sub btnissue_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnissue.Click
+        Try
+            cmd.CommandText = "insert into tblissuebook values(" & txtstudid.Text & ",'" & txtsname.Text & "','" & DropDownList1.SelectedItem.Text & "','" & txtissuedate.Text & "','" & txtreturndate.Text & "')"
+            con.Open()
+            cmd.ExecuteNonQuery()
+            con.Close()
+            Label7.Text = "Book issued succesfully"
+            clear()
         Catch ex As Exception
             Label7.Text = ex.Message
         End Try
     End Sub
-
 End Class

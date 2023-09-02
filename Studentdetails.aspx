@@ -5,9 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="style13">
         <tr>
-            <td colspan="2">
+            <td colspan="2" bgcolor="#FFCC66">
                         <asp:Label ID="Label4" runat="server" Text="Student details" 
-                    Font-Size="25pt" ForeColor="#66CCFF"></asp:Label>
+                    Font-Size="25pt" ForeColor="#FF6600"></asp:Label>
                     </td>
         </tr>
         <tr>

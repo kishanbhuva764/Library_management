@@ -19,6 +19,15 @@
         {
             height: 33px;
         }
+        .style23
+        {
+            width: 166px;
+            height: 29px;
+        }
+        .style24
+        {
+            height: 29px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
@@ -40,11 +49,11 @@
                 <td>
                     <table class="style1" style="margin-bottom: 0px">
                         <tr>
-                            <td class="style20">
+                            <td class="style23">
                                 <asp:Label ID="Label12" runat="server" Text="Student id :"></asp:Label>
                             </td>
-                            <td>
-                                <asp:Label ID="txtsid" runat="server" Text="Label"></asp:Label>
+                            <td class="style24">
+                                <asp:TextBox ID="txtsid" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -52,7 +61,7 @@
                                 <asp:Label ID="Label5" runat="server" Text="First name :"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="txtfname" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtfname" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -60,7 +69,7 @@
                                 <asp:Label ID="Label6" runat="server" Text="Last name :"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="txtlname" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtlname" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -68,15 +77,15 @@
                                 <asp:Label ID="Label7" runat="server" Text="User name :"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="txtuname" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtuname" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td class="style20">
+                            <td class="style21">
                                 <asp:Label ID="Label8" runat="server" Text="City :"></asp:Label>
                             </td>
-                            <td>
-                                <asp:Label ID="txtcity" runat="server" BorderStyle="None" Text="Label"></asp:Label>
+                            <td class="style19">
+                                <asp:TextBox ID="txtcity" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -84,7 +93,7 @@
                                 <asp:Label ID="Label9" runat="server" Text="Email :"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="txtemail" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -92,7 +101,7 @@
                                 <asp:Label ID="Label10" runat="server" Text="Mobile no. :"></asp:Label>
                             </td>
                             <td class="style19">
-                                <asp:Label ID="txtmono" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtmono" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -100,7 +109,7 @@
                                 <asp:Label ID="Label11" runat="server" Text="Gender :"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="txtgen" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtgender" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -108,7 +117,7 @@
                                 <asp:Label ID="Label13" runat="server" Text="Date of Birth :"></asp:Label>
                             </td>
                             <td>
-                                <asp:Label ID="txtdob" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtdate" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                     </table>
@@ -117,16 +126,16 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td align="right" class="style22">
-                    <asp:Button ID="btnedit" runat="server" Text="Edit" />
-                    <asp:Label ID="lblmsg" runat="server" Text="Label"></asp:Label>
+                <td align="left" class="style22">
+                    <asp:Label ID="lblmsg" runat="server" Text="Label" ForeColor="Red"></asp:Label>
                 </td>
                 <td class="style22">
                 </td>
             </tr>
             <tr>
                 <td>
-                    &nbsp;</td>
+                    <asp:Button ID="btnedit" runat="server" Text="Edit" />
+                    </td>
                 <td>
                     &nbsp;</td>
             </tr>

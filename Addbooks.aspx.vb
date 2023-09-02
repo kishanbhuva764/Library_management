@@ -135,4 +135,8 @@ Partial Class Addbooks
     Protected Sub DropDownList1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DropDownList1.SelectedIndexChanged
 
     End Sub
+
+    Protected Sub txtauthor_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtauthor.TextChanged
+
+    End Sub
 End Class

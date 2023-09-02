@@ -22,7 +22,7 @@
         {
             text-align: right;
             height: 30px;
-            width: 771px;
+            width: 658px;
         }
         .style14
         {
@@ -31,13 +31,13 @@
         .style12
         {
             text-align: right;
-            width: 771px;
+            width: 658px;
         }
         .style15
         {
             text-align: right;
             height: 27px;
-            width: 771px;
+            width: 658px;
         }
         .style16
         {
@@ -45,7 +45,7 @@
         }
         .style17
         {
-            width: 771px;
+            width: 658px;
         }
         .style21
         {
@@ -58,7 +58,7 @@
         }
         .style24
         {
-            width: 771px;
+            width: 658px;
             height: 26px;
         }
         .style25
@@ -74,7 +74,7 @@
         {
             text-align: right;
             height: 37px;
-            width: 771px;
+            width: 658px;
         }
         .style28
         {
@@ -90,8 +90,7 @@
     <table class="style19">
         <tr>
             <td colspan="2" align="center">
-                <span class="style22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </span><span class="style26">Login Here</span><span class="style21"> </span>
+                <span class="style22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="style26">Login Here</span><span class="style21"> </span>
             </td>
         </tr>
         <tr>

@@ -111,7 +111,7 @@
                 <td class="style16">
                             <asp:Button ID="Button8" runat="server" BackColor="#0099FF" BorderColor="Black" 
                                 BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" 
-                                ForeColor="White" Height="50px" PostBackUrl="~/home.aspx" Text="Issued Book" 
+                                ForeColor="White" Height="50px" PostBackUrl="~/Student/myissuebook.aspx" Text="Issued Book" 
                                 Width="150px" />
                         </td>
                 <td class="style16">

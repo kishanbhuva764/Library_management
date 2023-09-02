@@ -56,8 +56,11 @@
         <table align="center" class="style1">
             <tr>
                 <td class="style21" colspan="2" 
-                    style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC">
-                    <asp:Label ID="Label4" runat="server" Text="Add new student"></asp:Label>
+                    
+                    style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC" 
+                    align="left" bgcolor="#FFCC66">
+                    &nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Text="Add new student" Font-Size="40pt" 
+                        ForeColor="#FF6600" style="font-size: xx-large"></asp:Label>
                 </td>
             </tr>
             <tr>

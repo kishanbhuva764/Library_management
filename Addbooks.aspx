@@ -20,11 +20,11 @@
            
            .style8
     {
-            text-align: right;
-            color: black;
-            height: 34px;
-            width: 10%;
-        }
+        text-align: right;
+        color: black;
+        height: 34px;
+        width: 341px;
+    }
     .style9
     {
         height: 34px;
@@ -51,9 +51,10 @@
         }
         .style17
         {
-            text-align: right;
-            color: black;
-            }
+        text-align: right;
+        color: black;
+        width: 341px;
+    }
         .style18
         {
             text-align: right;
@@ -68,8 +69,58 @@
         .style20
         {
             height: 33px;
-            width: 10%;
+            width: 341px;
         }
+        .style21
+    {
+        text-align: right;
+        color: black;
+        height: 29px;
+        width: 341px;
+    }
+    .style22
+    {
+        width: 100%;
+        margin-right: 105px;
+        height: 29px;
+    }
+    .style23
+    {
+        width: 341px;
+    }
+    .style25
+    {
+        text-align: right;
+        color: black;
+        height: 2px;
+        width: 341px;
+    }
+    .style26
+    {
+        height: 2px;
+    }
+    .style27
+    {
+        text-align: right;
+        color: black;
+        width: 341px;
+        height: 27px;
+    }
+    .style28
+    {
+        height: 27px;
+    }
+    .style29
+    {
+        text-align: right;
+        color: black;
+        width: 341px;
+        height: 32px;
+    }
+    .style30
+    {
+        height: 32px;
+    }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -77,18 +128,36 @@
     <table class="tbl">
     <tr>
         <td class="style5" align="left">
-            <table align="center" class="style1" style="margin-top: 15px">
+            <table align="center" class="style1" style="margin-top: 0px">
                 <tr>
-                    <td class="style10" align="left" colspan="2" 
-                        style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC">
-                        <asp:Label ID="Label4" runat="server" Text="Add New Book"></asp:Label>
+                    <td align="left" colspan="2" 
+                        
+                        style="font-family: 'Bahnschrift SemiBold'; font-size: 54px; color: #0099CC" 
+                        bgcolor="#FFCC66">
+                        &nbsp;
+                        <asp:Label ID="Label4" runat="server" Text="Add New Book" Font-Size="40pt" 
+                            ForeColor="#FF6600" style="font-size: xx-large"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="style17" align="left">
-                        BookName :</td>
-                    <td class="style9">
+                    <td class="style25" align="right">
+                        &nbsp;</td>
+                    <td class="style26">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style25" align="right">
+                        <asp:Label ID="Label5" runat="server" Text="Book Name :"></asp:Label>
+                    </td>
+                    <td class="style26">
+                        &nbsp;
                         <asp:TextBox ID="txtbname" runat="server" CssClass="txt" Width="197px"></asp:TextBox>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style25" align="right">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <td class="style25">
                     </td>
                 </tr>
                 <tr>
@@ -96,13 +165,21 @@
                         Autor :
                     </td>
                     <td>
+                        &nbsp;
                         <asp:TextBox ID="txtauthor" runat="server" CssClass="txt" Width="198px"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="style18" align="left">
+                    <td class="style25" align="left">
+                        &nbsp;</td>
+                    <td align="left" class="style25">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style21" align="left">
                         Category :</td>
-                    <td align="left" class="style1">
+                    <td align="left" class="style22">
+                        &nbsp;
                         <asp:DropDownList ID="DropDownList1" runat="server">
                             <asp:ListItem>Programming</asp:ListItem>
                             <asp:ListItem>Mystery</asp:ListItem>
@@ -112,36 +189,64 @@
                             <asp:ListItem>Logic building</asp:ListItem>
                             <asp:ListItem>History</asp:ListItem>
                         </asp:DropDownList>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style25" align="left">
+                        </td>
+                    <td class="style25">
                     </td>
                 </tr>
                 <tr>
                     <td class="style8" align="left">
                         Publisher :</td>
                     <td class="style9">
+                        &nbsp;
                         <asp:TextBox ID="txtpublisher" runat="server" CssClass="txt" Width="198px"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" class="style25">
+                        &nbsp;</td>
+                    <td align="left" class="style25">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td align="left" class="style8">
                         Update on :
                     </td>
                     <td align="left" class="style9">
+                        &nbsp;
                         <asp:TextBox ID="txtdate" runat="server" CssClass="txt" Width="198px" 
                             TextMode="Date"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style17" align="left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="style17" align="left">
                         Price :
                     </td>
                     <td>
+                        &nbsp;
                         <asp:TextBox ID="txtprice" runat="server" CssClass="txt" Width="199px"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style17" align="left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="style17" align="left">
                         Quantity&nbsp; :</td>
                     <td>
+                        &nbsp;
                         <asp:DropDownList ID="DropDownList2" runat="server">
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
@@ -155,14 +260,27 @@
                             <asp:ListItem>10</asp:ListItem>
                             <asp:ListItem>more</asp:ListItem>
                         </asp:DropDownList>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="style17" align="left">
-                        Description : </td>
+                        &nbsp;</td>
                     <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style29" align="left">
+                        Description :</td>
+                    <td class="style30">
+                        &nbsp;
                         <asp:TextBox ID="txtdetail" runat="server" CssClass="txt" Height="24px" 
                             Width="199px"></asp:TextBox>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style27" align="left">
+                    </td>
+                    <td class="style28">
                     </td>
                 </tr>
                 <tr>
@@ -170,13 +288,19 @@
                         Book Photo :
                     </td>
                     <td class="style12">
+                        &nbsp;
                         <asp:FileUpload ID="FileUpload1" runat="server" />
                         <br />
-                        <asp:Image ID="Image1" runat="server" />
                     </td>
                 </tr>
                 <tr>
-                    <td align="left" class="style19">
+                    <td align="left" class="style23">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" class="style23">
                         &nbsp;</td>
                     <td>
                         <asp:Label ID="lblmsg" runat="server" ForeColor="Red"></asp:Label>
@@ -190,7 +314,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style19">
+                    <td class="style23">
                         &nbsp;</td>
                     <td>
                         &nbsp;</td>
