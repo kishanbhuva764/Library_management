@@ -1,37 +1,31 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Data
-Partial Class Student_myissuebook
+Partial Class Student_issuedbooks
     Inherits System.Web.UI.Page
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
     Dim da As New SqlDataAdapter
     Dim dt As New DataTable
-    Dim filepath As String
-    Dim constring As String = ConfigurationManager.ConnectionStrings("constring").ToString()
+    Dim constring As String = ConfigurationManager.ConnectionStrings("constring").ToString
 
-    
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-            con.Open()
+            'lblmsg.Text = Session("usid")
             con.ConnectionString = constring
             cmd.Connection = con
-            'cmd.CommandText = "select * from tblissuebook order by id"
-            'Dim id = cmd.ExecuteScalar()
-            'con.Close()
-            If id.Equals(Label5.Text) Then
+            If IsPostBack = False Then
                 fillgrid()
             End If
         Catch ex As Exception
             lblmsg.Text = ex.Message
         End Try
-        If IsPostBack = False Then
-            fillgrid()
-        End If
     End Sub
+
     Sub fillgrid()
         Try
-            cmd.CommandText = "select * from tblissuebook "
+            cmd.CommandText = "select * from tblissuebook where studentid = " & Session("usid") & ""
             da = New SqlDataAdapter(cmd)
             dt = New DataTable
             da.Fill(dt)

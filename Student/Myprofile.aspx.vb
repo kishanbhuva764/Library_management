@@ -18,7 +18,7 @@ Partial Class Student_Myprofile
             con.ConnectionString = constring
             cmd.Connection = con
             txtsid.Text = sid
-            fillcontrol()
+            fillcontrol(sid)
         Catch ex As Exception
             lblmsg.Text = ex.Message
         End Try
@@ -31,12 +31,12 @@ Partial Class Student_Myprofile
             con.Open()
             cmd.ExecuteNonQuery()
             con.Close()
-            fillcontrol()
+            'fillcontrol()
         Catch ex As Exception
             lblmsg.Text = ex.Message
         End Try
     End Sub
-    Sub fillcontrol()
+    Sub fillcontrol(ByVal sid As String)
         Try
             con.Open()
             cmd.CommandText = "select fname from tblstudregister where sid = " & txtsid.Text & ""

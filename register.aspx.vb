@@ -71,6 +71,7 @@ Partial Class register
             con.Close()
             clear()
             lblmsg.Text = "Register succesfully"
+            Response.Redirect("login.aspx")
         Catch ex As Exception
             lblmsg.Text = ex.Message
         End Try
